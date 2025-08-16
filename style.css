@@ -12,13 +12,17 @@ body {
 }
 
 #clock {
-    background-color: #2d3038;
-    border: 2px solid white;
     padding: 10px 20px;
-    box-shadow: 4px 6px 6px #50576b;
+    box-shadow:  0px 0px 10px #161921;
     border-radius: 10px;
     position: relative; /* stays above video */
     z-index: 1;
+    backdrop-filter: blur(3px);
+    display: inline-block;
+}
+#clock::after{
+    content: "";
+    display: block;
 }
 
 #vid {
@@ -29,4 +33,5 @@ body {
     height: 100%;
     object-fit: cover; /* make it cover whole screen */
     z-index: -1; /* send it behind the clock */
+    
 }
